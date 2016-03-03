@@ -1,0 +1,28 @@
+DateMaking 테이블 : 시간잡기 정보들을 저장하는 DB
+
+DateMaking
+
+No integer not null auto_increment,
+GroupTitle varchar(100) not null,
+timeFixTitle varchar(100) not null,
+timeFixOutline varchar(100) not null,
+eventTime varchar(10) not null,
+choice integer not null,
+primary key(No)
+
+DateMaking_contactsList
+
+No integer not null,
+name varchar(30) not null,
+email varchar(30) not null,
+phonenum varchar(30) not null,
+
+DateMaking_dateList
+
+No integer not null,
+date varchar(30) not null,
+
+DateMaking_timeList
+
+No integer not null,
+time varchar(30) not null,

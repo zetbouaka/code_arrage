@@ -1,0 +1,5 @@
+DB:SMS에 SQL 쿼리
+
+Insert into em_tran
+(tran_phone, tran_callback, tran_status, tran_date, tran_msg , tran_type) values
+('010-7442-3141', '010-000-0000', '1', sysdate(), 'Test Message입니다' ,4)

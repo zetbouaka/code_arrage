@@ -1,0 +1,74 @@
+group 테이블 : 그룹의 이름들을 저장해놓는 DB
+GroupList (Name) 
+
+user 테이블  : 유저의 정보를 저장해놓는 DB
+user (Name, PhoneNumber) : 이름과 휴대전화번호를 저장
+
+group_user 테이블 : 어떤 유저가 어떤 그룹에 속해있는지 저장해놓는 DB
+group_user(PhoneNumber, Group) : PhoneNumber 유저가 Group 그룹에 속해있다.
+
+
+
+PHP 패키지 파일들
+MYSQL, PHPMYADMIN, ...
+
+아파치 서버 
+
+DB 연동에 필요한 패키지
+SMS 연동 패키지 설치 및 테스트
+
+
+http://125.209.196.29/ : 웹 페이지 연결 주소
+var/www/html 폴더 : 웹 페이지 폴더
+
+http://125.209.196.29/phpmyadmin
+
+unist9729
+
+no integer auto_increment,
+
+125.209.196.29/join_process.php
+
+Primary Key = No <?xml version="1.0" encoding="UTF-8"?>
+<body>
+<groupTitle>김대연짱짱</groupTitle>
+<meetingTitle>엔턴쉽멘토링.</meetringTitle>
+<meetingOutline>8월 4일 엔턴쉽에서 이택경대표님께 멘토링을 받기로함.</meetingOutline>
+<contactsList><data>
+<phoneNum>01011112222</phoneNum>
+<name>철현 최</name>
+<email>(null)</email>
+</data>
+<data>
+<phoneNum>(null)</phoneNum>
+<name>대윤 정</name>
+<email>(null)</email>
+</data>
+<data>
+<phoneNum>01048447086</phoneNum>
+<name>대연 김</name>
+<email>(null)</email>
+</data>
+</contactsList>
+<date>2012/8/(null)</date>
+<time>118897172/30</time>
+<attendance>1</attendance>
+<alarm>4</alarm>
+<loation></location></body>
+이런형식으로 xml로 보낼꺼구
+변수이름은 @"Phone_Number=%@&DeviceID=%@&xmlfile=%@"
+phone_number DeviceID xmlfile
+이렇게 보내
+그리고 파일첨부할때
+    if(_attachedView != nil){
+        NSString *_boundary = [NSString stringWithString:@"21312425987239857"];
+        NSString *_contentType = [NSString stringWithFormat:@"multipart/form-data; boundary=%@", _boundary];
+        [_request addValue:_contentType forHTTPHeaderField:@"Content-Type"];
+        
+        [_body appendData:[[NSString stringWithFormat:@"\r\n--%@\r\n", _boundary] dataUsingEncoding:NSUTF8StringEncoding]];
+        [_body appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"upload\"; filename=\"%@\"\r\n",nil] dataUsingEncoding:NSUTF8StringEncoding]];
+        [_body appendData:[[NSString stringWithString:@"Content-Type: application/octet-stream\r\n\r\n"] dataUsingEncoding:NSUTF8StringEncoding]];
+        NSData* _imageData = UIImagePNGRepresentation(_attachedView.file);
+        [_body appendData:_imageData];
+        [_body appendData:[[NSString stringWithFormat:@"\r\n--%@--\r\n",_boundary] dataUsingEncoding:NSUTF8StringEncoding]];
+    }
