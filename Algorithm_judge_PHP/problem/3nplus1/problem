@@ -1,0 +1,59 @@
+<html>
+   <head>
+      <title>3*n+1 문제</title>
+      <meta http-equiv="content-type" content="text/html; charset=euc-kr">
+      <link rel="stylesheet" type="text/css" href="/main.css">
+   </head>
+   <body>
+
+      <div class=pname> 
+      프로그램 명: 3np1
+      </div>
+      <div class=tlimit>
+      제한시간: 1 초
+      </div>
+<!-- here -->
+
+정수를 입력으로 받아, 
+
+<ul>
+<li>짝수이면 2 로 나누고 , 홀수이면 3 배해서 1 을 더함 
+<li> 1 이 될 때 까지 반복
+</ul>
+
+<p> 6 이 입력으로 주어지면 
+
+<blockquote>
+6 3 10 5 16 8 4 2 1
+</blockquote>
+
+      <h4>입력</h4>
+
+      1000 이하의 자연수가 입력으로 주어진다.
+
+      <h4>출력</h4>
+
+      공백 한자리로 수를 구분한다.
+
+      <h4>입출력 예</h4>
+
+<pre class=io>
+입력
+
+4
+
+출력
+
+4 2 1
+
+입력
+
+6
+
+출력
+
+6 3 10 5 16 8 4 2 1
+</pre>
+      
+   </body>
+</html>
