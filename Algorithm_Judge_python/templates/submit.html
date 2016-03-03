@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Submit</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      .container {
+        max-width: 1000px;
+	max-height: 1000px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+   <form method=post name=srcfrom action='/submit/score/{{ pname }}'>
+      프로그램 명: {{ pname }}
+
+      <p>Source: 
+      <br><textarea name='src' id='src' cols='80' rows='25' ></textarea>
+      <br>
+      <input type=submit value='제출' style='width:80'>
+      </form>
+    
+  </body>
+</html>
